@@ -1,4 +1,4 @@
-package _03EstructurasControl;
+package _01Variables;
 
 import java.util.Scanner;
 
