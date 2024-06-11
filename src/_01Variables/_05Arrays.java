@@ -8,6 +8,7 @@ public class _05Arrays {
         //Realizar un programa que solicite una a una la introducción de seis notas (double)
         //Que seran guardadas en un array, y tras ello el programa dara los siguientes datos
         //Nota media, nota mas alta , aprobados (cada nota que sea un aprobado)
+        //
 
         //Dado una serie de precios de  10 coches, se le pedira al cliente cual
         //es su presupuesto y el programa indicara a cuantos coches puede optar
