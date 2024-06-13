@@ -131,26 +131,45 @@ public class _05Arrays {
         //Contestar en la consola si existe en el array o no.
         //Hacerlo con un foreach.
 
-        String[] productos={"zapatos de charol","camisetas","Polos de fresa"};
-        System.out.println("Ingresa el producto que quieres mirar");
-        String productoElegido=entradaDatos.nextLine();
-        boolean hayproducto=false;
-        for(String elemento:productos)
-        {
-            if (productoElegido.equals(elemento))
-            {
-                hayproducto=true;
+//        String[] productos={"zapatos de charol","camisetas","Polos de fresa"};
+//        System.out.println("Ingresa el producto que quieres mirar");
+//        String productoElegido=entradaDatos.nextLine();
+//        boolean hayproducto=false;
+//        for(String elemento:productos)
+//        {
+//            if (productoElegido.equals(elemento))
+//            {
+//                hayproducto=true;
+//            }
+//        }
+//        if (hayproducto)
+//        {
+//            System.out.println("Tenemos el producto que eligió");
+//        }
+//        else
+//        {
+//            System.out.println("No tenego el producto que eligió");
+//        }
+
+        //Dado los datos de coches, se le pedira al cliente cual
+        //es su presupuesto y el programa indicara a cuantos coches puede optar
+
+        String[] preciosCoches = {"Volvo-19_000", "Audi-23_450", "Seat-15_251", "Bmw-30_251", "Renault-15_365", "Opel-19_251"};
+        double presupuesto;
+        //int n=Integer.parseInt("100");
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese su presupuesto: ");
+        presupuesto = teclado.nextDouble();
+
+        for (String coche : preciosCoches) {
+            coche = coche.replace("_", "");//Para poder leer o sustituir _ por espacio " "
+            int posicion = coche.indexOf("-");
+            String marca = coche.substring(0, posicion);
+            double precio = Double.parseDouble(coche.substring(posicion + 1, coche.length()));
+
+            if (presupuesto >= precio) {
+                System.out.println("Te puedes comprar un " + marca);
             }
         }
-        if (hayproducto)
-        {
-            System.out.println("Tenemos el producto que eligió");
-        }
-        else
-        {
-            System.out.println("No tenego el producto que eligió");
-        }
-
-
     }
 }
